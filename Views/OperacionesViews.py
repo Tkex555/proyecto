@@ -26,4 +26,4 @@ class VistaOperacion:
             for operacion in operaciones:
                 print(operacion)
         else:
-            print("El historial está vacío.")
+            print("Ya no hay mas operaciones.")
