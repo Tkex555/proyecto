@@ -10,9 +10,15 @@ class OperacionBase:
         operacion = f"{num1} {operador} {num2}"
         query = "INSERT INTO historial (operacion, resultado) VALUES (%s, %s)" #envia la operacion a la base de datos
         valores = (operacion, resultado)
-        self.cursor.execute(query, valores)
+        self.cursor.execute(query, valores) #guarda en la tabla historial
         self.db.commit()
         print("Operación guardada en el historial.")
+    
+        query = "INSERT INTO operaciones (tipo_operacion, numero1, numero2, resultado) VALUES (%s, %s, %s, %s)" #envia la operacion a la base de datos
+        valores = ( operador, num1, num2, resultado)
+        self.cursor.execute(query, valores)
+        self.db.commit() #guarda en la tabla operaciones
+        print("Operación guardada en las operaciones.")
 
     def mostrar_operaciones(self):
         self.db.reconnect()  #se reconecta a la base de datos 
