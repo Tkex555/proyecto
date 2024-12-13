@@ -20,7 +20,7 @@ def main():
         print("5. Consultar Historial") 
         print("0. Salir")
 
-        opcion = input("Opción: ")
+        opcion = input("Opción: ") #opciones
         if opcion == "1":
             controller = SumarController()
             controller.realizar_suma()
