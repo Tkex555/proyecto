@@ -2,7 +2,7 @@ class VistaOperacion:
     def __init__(self, controlador):
         self.controlador = controlador
 
-    def mostrar_menu(self):
+    def mostrar_menu(self): 
         """Muestra el menú principal para la consulta de historial."""
         while True:
             print("\n--- Menú de Operaciones ---")
@@ -21,9 +21,9 @@ class VistaOperacion:
     def consultar_historial(self):
         """Muestra el historial de operaciones en la consola."""
         print("\n--- Historial de Operaciones ---")
-        operaciones = self.controlador.consultar_historial()
+        operaciones = self.controlador.consultar_historial() 
         if operaciones:
             for operacion in operaciones:
                 print(operacion)
         else:
-            print("Ya no hay mas operaciones.")
+            print("Ya no hay mas operaciones.") #se muestra al final del historial para avisar que no hay mas

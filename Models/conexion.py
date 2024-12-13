@@ -1,7 +1,7 @@
 import mysql.connector
 
 class ConexionDB:
-    def __init__(self):
+    def __init__(self): #conexion con la base de datos
         self.config = {
             "host": "localhost",
             "user": "root",

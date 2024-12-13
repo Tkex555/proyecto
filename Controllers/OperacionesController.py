@@ -13,6 +13,6 @@ class ControladorOperacion:
         """
         try:
             return float(entrada)
-        except ValueError:
+        except ValueError: #si los datos no son numeros pide que se ingresen de nuevo
             print("Por favor, ingrese un número válido.")
             return None

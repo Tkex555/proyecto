@@ -10,6 +10,7 @@ class DividirController:
         num1, num2 = self.view.obtener_numeros()
         try:
             resultado = self.model.calcular(num1, num2)
-            self.view.mostrar_resultado(num1, num2, "/", resultado)
+            self.view.mostrar_resultado(num1, num2, "/", resultado) 
         except ZeroDivisionError as e:
             self.view.mostrar_error(str(e))
+        #si el divisor es 0 

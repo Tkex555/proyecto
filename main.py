@@ -11,7 +11,7 @@ def main():
     controlador_historial = ControladorOperacion(modelo) 
     vista_historial = VistaOperacion(controlador_historial)  
 
-    while True:
+    while True: #Menu para elegir operacion a realizar
         print("\nElige una operación:")
         print("1. Sumar")
         print("2. Restar")

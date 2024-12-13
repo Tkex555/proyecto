@@ -4,7 +4,7 @@ class SumarView:
             num1 = float(input("Ingrese el primer número: "))
             num2 = float(input("Ingrese el segundo número: "))
             return num1, num2
-        except ValueError:
+        except ValueError: #si los datos ingresados no son numeros pide que se ingresen otra vez
             print("Error: Por favor, ingrese números válidos.")
             return self.obtener_numeros()
 
