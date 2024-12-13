@@ -15,6 +15,8 @@ class OperacionBase:
         print("Operación guardada en el historial.")
 
     def mostrar_operaciones(self):
+        self.db.reconnect()  #se reconecta a la base de datos 
+        self.cursor = self.db.cursor()  #Se crea un nuevo cursor
         query = "SELECT * FROM historial"
         self.cursor.execute(query)
         resultados = self.cursor.fetchall()
